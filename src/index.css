@@ -1,4 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.partition {
+    position: relative;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    resize: both;
+    overflow: auto;
+}
+
+.partition-vertical {
+    flex-direction: column;
+}
+
+.partition-horizontal {
+    flex-direction: row;
+}
+
+.button-container {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+}
+
+.button-container button {
+    background: white;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.resizable {
+    resize: both;
+    overflow: auto;
+}
